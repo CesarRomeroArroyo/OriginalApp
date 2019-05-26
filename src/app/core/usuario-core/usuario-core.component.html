@@ -1,0 +1,49 @@
+<div class="usuariocore">
+    <div class="usuariocore__datosbasicos">
+        <div class="usuariocore__datosbasicos__icon"> <i class="fa fa-user-circle fa-4x" aria-hidden="true"></i> </div>
+        <div class="usuariocore__datosbasicos__col">
+          <div class="usuariocore__datosbasicos__col__registro">
+            <div class="usuariocore__datosbasicos__col__registro__lbl">
+                Nombre:
+            </div>
+            <div class="usuariocore__datosbasicos__col__registro__campo">
+                <input type="text" name="nombre" [(ngModel)]="usuario.nombre">
+            </div>
+          </div>
+          <div class="usuariocore__datosbasicos__col__registro">
+              <div class="usuariocore__datosbasicos__col__registro__lbl">
+                  Email:
+              </div>
+              <div class="usuariocore__datosbasicos__col__registro__campo">
+                  <input type="text" name="email" [(ngModel)]="usuario.email">
+              </div>
+          </div>
+          <div class="usuariocore__datosbasicos__col__registro">
+              <div class="usuariocore__datosbasicos__col__registro__lbl">
+                  Telefono:
+              </div>
+              <div class="usuariocore__datosbasicos__col__registro__campo">
+                  <input type="text" name="telefono" [(ngModel)]="usuario.telefono">
+              </div>
+          </div>
+          <div class="usuariocore__datosbasicos__col__registro">
+              <div class="usuariocore__datosbasicos__col__registro__lbl">
+                  Password:
+              </div>
+              <div class="usuariocore__datosbasicos__col__registro__campo">
+                  <input type="password" name="password" [(ngModel)]="usuario.password">
+              </div>
+          </div>
+        </div>
+        <div class="usuariocore__datosbasicos__col">  
+          <div class="usuariocore__datosbasicos__col__registro">
+              <div class="usuariocore__datosbasicos__col__registro__lbl">
+                  &nbsp;
+              </div>
+              <div class="usuariocore__datosbasicos__col__registro__campo">
+                  <button (click)="guardar()"><i class="fa fa-save" aria-hidden="true"></i> Guardar</button>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>

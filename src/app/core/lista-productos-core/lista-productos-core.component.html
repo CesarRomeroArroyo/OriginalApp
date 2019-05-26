@@ -1,0 +1,25 @@
+<div class="lista">
+  
+  <div class="lista__content">
+      <div class="lista__content__busqueda">
+          Buscar: <input type="text" name="buscarText"  [(ngModel)]="buscarText" (keyup)="buscar()">
+          <button [routerLink]="['/newProductoCore']" ><i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
+        </div>
+      <table>
+          <tr>
+              <th>Codigo</th>
+              <th>Nombre</th>
+              <th>Opciones</th>
+          </tr>
+          <tr *ngFor="let producto of productos">
+              <td>{{producto.id}}</td>
+              <td>{{producto.nombre}}</td>
+              <td>
+                <i [routerLink]="['/editProductoCore', producto.id]"  class="fa fa-pencil fa-2x" aria-hidden="true"></i>  
+              </td>
+            </tr>
+        </table>
+  </div>
+
+  
+</div>

@@ -1,0 +1,332 @@
+<div class="productocore">
+  <div class="productocore__datosbasicos">
+    <div class="productocore__datosbasicos__icon"> <i class="fa fa-product-hunt fa-4x" aria-hidden="true"></i> </div>
+    <div class="productocore__datosbasicos__col">
+      <div class="productocore__datosbasicos__col__registro">
+        <div class="productocore__datosbasicos__col__registro__lbl">
+            Nombre:
+        </div>
+        <div class="productocore__datosbasicos__col__registro__campo">
+            <input type="text" name="" [(ngModel)]="name">
+        </div>
+      </div>
+      <div class="productocore__datosbasicos__col__registro">
+          <div class="productocore__datosbasicos__col__registro__lbl">
+              Marca:
+          </div>
+          <div class="productocore__datosbasicos__col__registro__campo">
+              <input type="text" name="" [(ngModel)]="name">
+          </div>
+      </div>
+      <div class="productocore__datosbasicos__col__registro">
+          <div class="productocore__datosbasicos__col__registro__lbl">
+              Registro Sanitario:
+          </div>
+          <div class="productocore__datosbasicos__col__registro__campo">
+              <input type="text" name="" [(ngModel)]="name">
+          </div>
+      </div>
+    </div>
+    <div class="productocore__datosbasicos__col">
+        <div class="productocore__datosbasicos__col__registro">
+            <div class="productocore__datosbasicos__col__registro__lbl">
+                Lote:
+            </div>
+            <div class="productocore__datosbasicos__col__registro__campo">
+                <input type="text" name="" [(ngModel)]="name">
+            </div>
+        </div>
+        <div class="productocore__datosbasicos__col__registro">
+            <div class="productocore__datosbasicos__col__registro__lbl">
+                Fecha Produccion:
+            </div>
+            <div class="productocore__datosbasicos__col__registro__campo">
+                <input type="date" name='' [(ngModel)]="name">
+            </div>
+        </div>
+        <div class="productocore__datosbasicos__col__registro">
+            <div class="productocore__datosbasicos__col__registro__lbl">
+                Apta de Consumo:
+            </div>
+            <div class="productocore__datosbasicos__col__registro__campo">
+                <input type="date" name='' [(ngModel)]="name">
+            </div>
+        </div>
+    </div>
+    <div class="productocore__datosbasicos__col">
+        <div class="productocore__datosbasicos__col__registro">
+            <div class="productocore__datosbasicos__col__registro__lbl">
+                Vencimiento:
+            </div>
+            <div class="productocore__datosbasicos__col__registro__campo">
+                <input type="date" name='' [(ngModel)]="name">
+            </div>
+        </div>
+        <div class="productocore__datosbasicos__col__registro">
+            <div class="productocore__datosbasicos__col__registro__lbl">
+                Unidad de medida:
+            </div>
+            <div class="productocore__datosbasicos__col__registro__campo">
+                <input type="text" name="" [(ngModel)]="name">
+            </div>
+        </div>
+        <div class="productocore__datosbasicos__col__registro">
+            <div class="productocore__datosbasicos__col__registro__lbl">
+                Volumen:
+            </div>
+            <div class="productocore__datosbasicos__col__registro__campo">
+                <input type="text" name="" [(ngModel)]="name">
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="productocore__data">
+      <div class="productocore__data__cabecera">
+        <div (click)="showTab(0)" [ngClass]="{'productocore__data__cabecera__opcion': !tabs[0], 'productocore__data__cabecera__opcionseleccion': tabs[0][0]}">Caracteristicas</div>
+        <div (click)="showTab(1)" [ngClass]="{'productocore__data__cabecera__opcion': !tabs[0], 'productocore__data__cabecera__opcionseleccion': tabs[0][1]}">Ingredientes</div>
+        <div (click)="showTab(2)" [ngClass]="{'productocore__data__cabecera__opcion': !tabs[0], 'productocore__data__cabecera__opcionseleccion': tabs[0][2]}">Informacion Nutricional</div>
+      </div>
+      <div class="productocore__data__contenido" *ngIf="tabs[0][0]">
+          <div class="productocore__data__contenido__col">
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Presentacion:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Contenido neto:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Tipo de tratamiento:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+          </div>
+
+          <div class="productocore__data__contenido__col">
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Nombre del fabricante:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Direccion del Fabricante:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Distribuidor:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <select name="distribuidor" >
+                          <option value="0">Seleccione un Distribuidor</option>
+                          <option *ngFor="let distribuidor of distribuidores" (value)="distribuidor">{{distribuidor.nombre}}</option>
+                      </select>
+                  </div>
+              </div>
+            </div>
+      </div>
+      <div class="productocore__data__contenido" *ngIf="tabs[0][1]">
+          <div class="productocore__data__contenido__col">
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Clase:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Nombre:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      &nbsp;
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <button> <i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="productocore__data__contenido__coltabla">
+              <table>
+                  <tr>
+                      <th>Clase</th>
+                      <th>Nombre</th>
+                      <th>Opciones</th>
+                  </tr>
+                  <tr>
+                    <td>Clase 1</td>
+                    <td>Nombre 1</td>
+                    <td><i class="fa fa-times fa-2x" aria-hidden="true"></i> </td>
+                  </tr>
+                </table>
+          </div>
+      </div>
+
+      <div class="productocore__data__contenido" *ngIf="tabs[0][2]">
+          <div class="productocore__data__contenido__col">
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Calorias Totales:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Calorias de grasas:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Proteinas:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Grasa total:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Grasa saturada:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Carbohidratos totales:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Fibra dietaria:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+          </div>
+
+          <div class="productocore__data__contenido__col">
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Colesterol:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Sodio:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Grasas Trans:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Azucares:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Vitamina A:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Vitamina C:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+              <div class="productocore__data__contenido__col__registro">
+                  <div class="productocore__data__contenido__col__registro__lbl">
+                      Hierro:
+                  </div>
+                  <div class="productocore__data__contenido__col__registro__campo">
+                      <input type="text" name="" [(ngModel)]="name">
+                  </div>
+              </div>
+            </div>
+            <div class="productocore__data__contenido__col">
+                <div class="productocore__data__contenido__col__registro">
+                    <div class="productocore__data__contenido__col__registro__lbl">
+                        Calcio:
+                    </div>
+                    <div class="productocore__data__contenido__col__registro__campo">
+                        <input type="text" name="" [(ngModel)]="name">
+                    </div>
+                </div>
+                <div class="productocore__data__contenido__col__registro">
+                    <div class="productocore__data__contenido__col__registro__lbl">
+                        Declaracion de Propiedades de Salud:
+                    </div>
+                    <div class="productocore__data__contenido__col__registro__campo">
+                        <input type="text" name="" [(ngModel)]="name">
+                    </div>
+                </div>
+            </div>
+      </div>
+  </div>
+  <div class="productocore__boton">
+    <i class="fa fa-save fa-2x" aria-hidden="true"></i>
+  </div>
+</div>

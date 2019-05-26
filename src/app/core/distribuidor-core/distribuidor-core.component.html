@@ -1,0 +1,50 @@
+<div class="distribuidorcore">
+    <div class="distribuidorcore__datosbasicos">
+        <div class="distribuidorcore__datosbasicos__icon"> <i class="fa fa-building fa-4x" aria-hidden="true"></i> </div>
+        <div class="distribuidorcore__datosbasicos__col">
+          <div class="distribuidorcore__datosbasicos__col__registro">
+            <div class="distribuidorcore__datosbasicos__col__registro__lbl">
+                Nombre:
+            </div>
+            <div class="distribuidorcore__datosbasicos__col__registro__campo">
+                <input type="text" name="nombre" [(ngModel)]="distribuidor.nombre">
+            </div>
+          </div>
+          <div class="distribuidorcore__datosbasicos__col__registro">
+                <div class="distribuidorcore__datosbasicos__col__registro__lbl">
+                    Nit:
+                </div>
+                <div class="distribuidorcore__datosbasicos__col__registro__campo">
+                    <input type="text" name="codigo" [(ngModel)]="distribuidor.codigo">
+                </div>
+            </div>
+          <div class="distribuidorcore__datosbasicos__col__registro">
+              <div class="distribuidorcore__datosbasicos__col__registro__lbl">
+                  Direccion:
+              </div>
+              <div class="distribuidorcore__datosbasicos__col__registro__campo">
+                  <input type="text" name="direccion" [(ngModel)]="distribuidor.direccion">
+              </div>
+          </div>
+          <div class="distribuidorcore__datosbasicos__col__registro">
+              <div class="distribuidorcore__datosbasicos__col__registro__lbl">
+                  Telefono:
+              </div>
+              <div class="distribuidorcore__datosbasicos__col__registro__campo">
+                  <input type="text" name="telefono" [(ngModel)]="distribuidor.telefono">
+              </div>
+          </div>
+          
+        </div>
+        <div class="distribuidorcore__datosbasicos__col">
+            <div class="distribuidorcore__datosbasicos__col__registro">
+              <div class="distribuidorcore__datosbasicos__col__registro__lbl">
+                  &nbsp;
+              </div>
+              <div class="distribuidorcore__datosbasicos__col__registro__campo">
+                  <button (click)="guardar()"><i class="fa fa-save" aria-hidden="true"></i> Guardar</button>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

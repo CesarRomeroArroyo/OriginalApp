@@ -1,0 +1,51 @@
+<div class="app">
+    <div class="app__navbar">
+        <div class="app__navbar__menu">
+            <i *ngIf="page==='/'" class="fa fa-bars fa-2x" aria-hidden="true" (click)="showMenu=!showMenu"></i>            
+            <i *ngIf="page!='/'" class="fa fa-long-arrow-left fa-2x" aria-hidden="true" onclick="window.history.back();"></i>
+            <div class="app__navbar__menu__logo">
+            <img src="assets/images/logo1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="{'app__menu':!showMenu, 'app__menu__show': showMenu}"  id="appmenu" (click)="showMenu=!showMenu">
+        <div [ngClass]="{'app__menu__options':!showMenu, 'app__menu__show__options__show': showMenu}">
+            <div class="app__menu__show__options__show__head">
+                Menu Principal
+            </div>
+            <div class="app__menu__show__options__show__options">
+                <div class="app__menu__show__options__show__options__opts" [routerLink]="['usuario']" (click)="showMenu=!showMenu">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp; Mis Datos
+                </div>
+            </div>
+            <div class="app__menu__show__options__show__options">
+                <div class="app__menu__show__options__show__options__opts" [routerLink]="['newEmpresaCore']" (click)="showMenu=!showMenu">
+                    <i class="fa fa-building" aria-hidden="true"></i>&nbsp; Mi Empresa
+                </div>
+            </div>
+            <div class="app__menu__show__options__show__options">
+                <div class="app__menu__show__options__show__options__opts" [routerLink]="['usuarioCore']" (click)="showMenu=!showMenu">
+                    <i class="fa fa-users" aria-hidden="true"></i>&nbsp; Mis Usuario
+                </div>
+            </div>
+            <div class="app__menu__show__options__show__options">
+                <div class="app__menu__show__options__show__options__opts" [routerLink]="['productoCore']" (click)="showMenu=!showMenu">
+                    <i class="fa fa-product-hunt" aria-hidden="true"></i>&nbsp; Mis Productos
+                </div>
+            </div>
+            <div class="app__menu__show__options__show__options">
+                <div class="app__menu__show__options__show__options__opts" [routerLink]="['codigoQRCore']" (click)="showMenu=!showMenu">
+                    <i class="fa fa-qrcode" aria-hidden="true"></i>&nbsp; Generar Codigos QR
+                </div>
+            </div>
+            <div class="app__menu__show__options__show__options">
+                <div class="app__menu__show__options__show__options__opts" [routerLink]="['distribuidorCore']" (click)="showMenu=!showMenu">
+                    <i class="fa fa-building-o" aria-hidden="true"></i>&nbsp; Mis Distribuidores
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <router-outlet></router-outlet>
+</div>
+
