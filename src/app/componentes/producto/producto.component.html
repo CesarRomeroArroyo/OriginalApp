@@ -4,16 +4,16 @@
 
   <div class="producto__primero">
     <div class="producto__primero__header">
-        <h2>Nombre del produto</h2>
+        <h2>{{producto.nombre.toUpperCase()}}</h2>
     </div>
     <div class="producto__primero__body">
       
       <div class="producto__primero__body__content">
         <div class="producto__primero__body__content__left">
-          Marca 
+            {{producto.marca.toUpperCase()}}
         </div>  
         <div class="producto__primero__body__content__right">
-          Reg Sanitario 
+            {{producto.registro.toUpperCase()}} 
         </div>
       </div>  
     </div>
@@ -25,15 +25,15 @@
     </div>
     <div class="producto__tercero__body">
         Presentacion: <br/>
-        Presentacion Producto<br/><br/>
+        {{producto.caracteristicas.presentacion.toUpperCase()}}<br/><br/>
         Contenido Neto: <br/>
-        123 gr <br/><br/>
+        {{producto.contenidoNeto.toUpperCase()}} <br/><br/>
         Tipo Tratamiento: <br/>
-        NA <br/><br/>
+        {{producto.caracteristicas.tipoTratamiento.toUpperCase()}} <br/><br/>
         Fabricante: <br/>
-        Fabricante 1 <br/><br/>
-        Direccion: <br/>
-        Direccion 
+        {{producto.caracteristicas.fabricante.toUpperCase()}} <br/><br/>
+        Direccion Fabricante: <br/>
+        {{producto.caracteristicas.direccionFabricante.toUpperCase()}} 
     </div>
   </div>
 
@@ -42,47 +42,8 @@
         <h2>Ingredientes</h2>
     </div>
     <div class="producto__segundo__body">
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
-        </div>
-        <div class="producto__segundo__body__ingrediente">
-          Ingrediente
+        <div class="producto__segundo__body__ingrediente" *ngFor="let ingrediente of producto.ingredientes">
+          {{ingrediente.clase.toUpperCase()}} - {{ingrediente.nombre.toUpperCase()}}
         </div>
     </div>
   </div>
@@ -91,29 +52,26 @@
       <div class="producto__cuarto__titulo">
           Información Nutricional
       </div>     
-      <div class="producto__cuarto__titulo__2">
-        Porciones: 
-      </div>
       <div class="producto__cuarto__barratitulo">&nbsp;</div>
-      <div class="producto__cuarto__registro">Calorias:</div>
+      <div class="producto__cuarto__registro">Calorias: {{producto.infoNutricional.caloriasTotales.toUpperCase()}}</div>
       <div class="producto__cuarto__barratitulo2">&nbsp;</div>
       <div class="producto__cuarto__registror">% de valor diario*</div>
-      <div class="producto__cuarto__registro">Calorias Grasa:</div>
-      <div class="producto__cuarto__registro">Proteinas:</div>
-      <div class="producto__cuarto__registro">Grasa Total:</div>
-      <div class="producto__cuarto__registro">Grasa Saturada:</div>
-      <div class="producto__cuarto__registro">Carbohidratos Totales:</div>
-      <div class="producto__cuarto__registro">Fibra dietaria:</div>
-      <div class="producto__cuarto__registro">Colesterol:</div>
-      <div class="producto__cuarto__registro">Sodio:</div>
-      <div class="producto__cuarto__registro">Grasas Trans:</div>
-      <div class="producto__cuarto__registro">Azucares:</div>
-      <div class="producto__cuarto__registro">Vitamina A:</div>
-      <div class="producto__cuarto__registro">Vitamina C:</div>
-      <div class="producto__cuarto__registro">Hierro:</div>
-      <div class="producto__cuarto__registro">Calcio:</div>
+      <div class="producto__cuarto__registro">Calorias Grasa: {{producto.infoNutricional.caloreiasGrasas.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Proteinas: {{producto.infoNutricional.proteinas.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Grasa Total: {{producto.infoNutricional.grasaTotal.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Grasa Saturada: {{producto.infoNutricional.grasaSaturada.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Carbohidratos Totales: {{producto.infoNutricional.carbohidratosTotatles.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Fibra dietaria: {{producto.infoNutricional.fibraDietaria.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Colesterol: {{producto.infoNutricional.colesterol.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Sodio: {{producto.infoNutricional.sodio.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Grasas Trans: {{producto.infoNutricional.grasaTrans.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Azucares: {{producto.infoNutricional.azucares.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Vitamina A: {{producto.infoNutricional.vitaminaA.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Vitamina C: {{producto.infoNutricional.vitaminaC.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Hierro: {{producto.infoNutricional.hierro.toUpperCase()}}</div>
+      <div class="producto__cuarto__registro">Calcio: {{producto.infoNutricional.calcio.toUpperCase()}}</div>
       <div class="producto__cuarto__barratitulo">&nbsp;</div>
-      <div class="producto__cuarto__registro">Declaracion de Propiedades de Salud:</div>
-      <div class="producto__cuarto__footer">*Los porcentajes de valores diarios se basan en una dieta de 2.000 calorias</div>
+      <div class="producto__cuarto__registro">Declaracion de Propiedades de Salud: {{producto.infoNutricional.declaracion.toUpperCase()}}</div>
+      <!--<div class="producto__cuarto__footer">*Los porcentajes de valores diarios se basan en una dieta de 2.000 calorias</div>-->
   </div>
 </div>

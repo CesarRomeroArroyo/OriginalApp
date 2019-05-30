@@ -13,9 +13,7 @@ export class AppComponent {
     this.router.events.subscribe((data: any)=> {
       if(data.url){
         this.page = data.url;
-        console.log(this.page);
       }
-      
     });
   }
 }

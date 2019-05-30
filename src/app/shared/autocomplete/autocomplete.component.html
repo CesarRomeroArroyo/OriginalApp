@@ -1,0 +1,6 @@
+<input type="text" name="valor" placeholder="Escriba para buscar" [(ngModel)]="valor" (keydown)="buscar()">
+<div class="autocomplete" *ngIf="valor!=='' && mostrar">
+  <div class="autocomplete__registro" *ngFor="let reg of resultados" (click)="seleccionar(reg)">
+    {{reg.nombre}}
+  </div>
+</div>

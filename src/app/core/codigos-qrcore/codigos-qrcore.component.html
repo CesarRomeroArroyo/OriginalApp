@@ -7,7 +7,7 @@
                 Producto:
             </div>
             <div class="codigocore__datosbasicos__col__registro__campo">
-                <input type="text">
+                <app-autocomplete  [tabla]="'producto'" [maxletras]="3" (obtenerValor)="seleccionarProducto($event)"></app-autocomplete>
             </div>
           </div>
         </div>
@@ -17,7 +17,7 @@
                 Cantidad:
             </div>
             <div class="codigocore__datosbasicos__col__registro__campo">
-                <input type="number">
+                <input type="number" name="valor" [(ngModel)]="valor">
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
                 &nbsp;
             </div>
             <div class="codigocore__datosbasicos__col__registro__campo">
-                <button><i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
+                <button (click)="agregarProducto()"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
             </div>
           </div>
         </div>
@@ -39,14 +39,39 @@
                     <th>Cnatidad</th>
                     <th>Opciones</th>
                 </tr>
-                <tr>
-                  <td>Producto 1</td>
-                  <td>Cantidad 1</td>
+                <tr *ngFor="let qr of qrs">
+                  <td>{{qr.producto.nombre}}</td>
+                  <td>{{qr.cantidad}}</td>
                   <td>
-                    <i class="fa fa-times fa-2x" aria-hidden="true"></i> 
+                    <i class="fa fa-times fa-2x" aria-hidden="true" (click)="eliminarProducto(qr)"></i> 
                   </td>
                 </tr>
               </table>
+              <div class="codigocore__tabla__botones">
+                <button (click)="guardar()"><i class="fa fa-save fa-2x" aria-hidden="true"></i> Guardar</button>
+            </div>
   </div>
-
+  <div class="codigocore__botones">
+      <button (click)="imprimir()"><i class="fa fa-print fa-2x" aria-hidden="true"></i> Imprimir</button>
+    </div>
+  <div class="codigocore__codigosqr" id="qrsComponent" style="display: inherit;
+  float:left;
+  height: 350px;
+  width: 1000px;
+  margin-top: 20px;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: scroll;        
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(173,173,173,1);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(173,173,173,1);
+  box-shadow: 0px 1px 5px 0px rgba(173,173,173,1);">
+    <div *ngFor="let qr of qrs" class="codigocore__codigosqr__code" style="margin: 20px;
+    width: 200px;
+    height: 200px;">
+        <qrcode  [qrdata]="qr.idunico.toString()" [size]="200" [level]="'M'"></qrcode>
+        {{qr.idunico}}
+    </div>
+    
+  </div>
 </div>
+

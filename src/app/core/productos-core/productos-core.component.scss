@@ -117,20 +117,15 @@
                 
             }
         }
+        &__botones {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            cursor: pointer;
+        }
     }
 
-    &__boton {
-        color: white;
-        background: #7E2662;
-        position: absolute;
-        top:70%;
-        left: 95%;
-        padding: 20px;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        cursor: pointer;
-    }
+    
 }

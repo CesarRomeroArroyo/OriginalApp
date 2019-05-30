@@ -13,6 +13,10 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+input{
+    text-transform: uppercase;
+}
+
 input:not([type=button]):not([type=submit]):not([type=checkbox]) {
     height: 25px;
     width: 70%;

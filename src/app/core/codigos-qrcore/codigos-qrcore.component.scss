@@ -53,14 +53,59 @@
 
     &__tabla {
         display:flex;
-        flex-direction: row;
-        justify-content: center;
-        height: 450px;
+        flex-direction: column;
+        align-items: center;
+        height: 350px;
         width: 95%;
         margin-top: 20px;
-        background: white;        
+        background: white;
+        overflow-x: hidden;
+        overflow-y: scroll;        
         -webkit-box-shadow: 0px 1px 5px 0px rgba(173,173,173,1);
         -moz-box-shadow: 0px 1px 5px 0px rgba(173,173,173,1);
         box-shadow: 0px 1px 5px 0px rgba(173,173,173,1);
+        &__botones {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            cursor: pointer;
+        }
+    }
+
+    &__botones {
+        margin-top: 20px;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        width: 95%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: white;
+        cursor: pointer;
+    }
+
+    &__codigosqr {
+        display: inherit;
+        float:left;
+        height: 900px;
+        width: 500px;
+        margin-top: 20px;
+        background: white;
+        overflow-x: hidden;
+        overflow-y: scroll;        
+        -webkit-box-shadow: 0px 1px 5px 0px rgba(173,173,173,1);
+        -moz-box-shadow: 0px 1px 5px 0px rgba(173,173,173,1);
+        box-shadow: 0px 1px 5px 0px rgba(173,173,173,1);
+        &__code{
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+        }
+        
     }
 }
+

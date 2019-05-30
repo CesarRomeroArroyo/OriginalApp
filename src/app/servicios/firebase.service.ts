@@ -56,7 +56,7 @@ export class FirebaseService {
 
   guardarDatos(tabla: string, data)  {
     this.itemsCollection = this.db.collection<any>(tabla);
-    this.itemsCollection.add(data).then(
+    this.itemsCollection.add(JSON.parse(JSON.stringify(data))).then(
       () => {
         Swal.fire(
           '',
@@ -75,7 +75,7 @@ export class FirebaseService {
 
   actualizarDatos (tabla, data, id) {
     this.itemsCollection = this.db.collection<any>(tabla);
-    this.itemsCollection.doc(id).update(data).then(
+    this.itemsCollection.doc(id).update(JSON.parse(JSON.stringify(data))).then(
       () => {
         Swal.fire(
           '',
@@ -109,5 +109,25 @@ export class FirebaseService {
         'error'
       )
     });
+  }
+
+  obtenerDatosQR(idunico) {
+    this.itemsCollection = this.db.collection('qr');
+    return this.itemsCollection.snapshotChanges().pipe(
+      map( data => {
+        let docs = data.map( d => {          
+          var data =  d.payload.doc.data();
+          console.log(data.qrs);
+          var qrs = data.qrs.find((qr)=> {
+            return qr.idunico === idunico;
+          });
+          return qrs;
+        });
+        if(docs.length > 0){
+          return docs[0];
+        }
+        return null;
+      })
+    );
   }
 }

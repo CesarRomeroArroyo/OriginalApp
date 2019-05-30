@@ -7,7 +7,7 @@
             Nombre:
         </div>
         <div class="productocore__datosbasicos__col__registro__campo">
-            <input type="text" name="" [(ngModel)]="name">
+            <input type="text" name="nombre" [(ngModel)]="producto.nombre">
         </div>
       </div>
       <div class="productocore__datosbasicos__col__registro">
@@ -15,7 +15,7 @@
               Marca:
           </div>
           <div class="productocore__datosbasicos__col__registro__campo">
-              <input type="text" name="" [(ngModel)]="name">
+              <input type="text" name="marca" [(ngModel)]="producto.marca">
           </div>
       </div>
       <div class="productocore__datosbasicos__col__registro">
@@ -23,7 +23,7 @@
               Registro Sanitario:
           </div>
           <div class="productocore__datosbasicos__col__registro__campo">
-              <input type="text" name="" [(ngModel)]="name">
+              <input type="text" name="registro" [(ngModel)]="producto.registro">
           </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
                 Lote:
             </div>
             <div class="productocore__datosbasicos__col__registro__campo">
-                <input type="text" name="" [(ngModel)]="name">
+                <input type="text" name="lote" [(ngModel)]="producto.lote">
             </div>
         </div>
         <div class="productocore__datosbasicos__col__registro">
@@ -41,7 +41,7 @@
                 Fecha Produccion:
             </div>
             <div class="productocore__datosbasicos__col__registro__campo">
-                <input type="date" name='' [(ngModel)]="name">
+                <input type="date" name='fechaProduccion' [(ngModel)]="producto.fechaProduccion">
             </div>
         </div>
         <div class="productocore__datosbasicos__col__registro">
@@ -49,7 +49,7 @@
                 Apta de Consumo:
             </div>
             <div class="productocore__datosbasicos__col__registro__campo">
-                <input type="date" name='' [(ngModel)]="name">
+                <input type="date" name='fechaAdtaConsumo' [(ngModel)]="producto.fechaAdtaConsumo">
             </div>
         </div>
     </div>
@@ -59,7 +59,7 @@
                 Vencimiento:
             </div>
             <div class="productocore__datosbasicos__col__registro__campo">
-                <input type="date" name='' [(ngModel)]="name">
+                <input type="date" name='fechaVencimiento' [(ngModel)]="producto.fechaVencimiento">
             </div>
         </div>
         <div class="productocore__datosbasicos__col__registro">
@@ -67,7 +67,7 @@
                 Unidad de medida:
             </div>
             <div class="productocore__datosbasicos__col__registro__campo">
-                <input type="text" name="" [(ngModel)]="name">
+                <input type="text" name="unidadMedida" [(ngModel)]="producto.unidadMedida">
             </div>
         </div>
         <div class="productocore__datosbasicos__col__registro">
@@ -75,7 +75,7 @@
                 Volumen:
             </div>
             <div class="productocore__datosbasicos__col__registro__campo">
-                <input type="text" name="" [(ngModel)]="name">
+                <input type="text" name="volumen" [(ngModel)]="producto.volumen">
             </div>
         </div>
     </div>
@@ -93,7 +93,7 @@
                       Presentacion:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="presentacion" [(ngModel)]="caracteristicas.presentacion">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -101,7 +101,7 @@
                       Contenido neto:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="contenidoNeto" [(ngModel)]="caracteristicas.contenidoNeto">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -109,7 +109,7 @@
                       Tipo de tratamiento:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="tipoTratamiento" [(ngModel)]="caracteristicas.tipoTratamiento">
                   </div>
               </div>
           </div>
@@ -120,7 +120,7 @@
                       Nombre del fabricante:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="fabricante" [(ngModel)]="caracteristicas.fabricante">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -128,7 +128,7 @@
                       Direccion del Fabricante:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="direccionFabricante" [(ngModel)]="caracteristicas.direccionFabricante">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -136,7 +136,7 @@
                       Distribuidor:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <select name="distribuidor" >
+                      <select name="distribuidor" [(ngModel)]="caracteristicas.distribuidor">
                           <option value="0">Seleccione un Distribuidor</option>
                           <option *ngFor="let distribuidor of distribuidores" (value)="distribuidor">{{distribuidor.nombre}}</option>
                       </select>
@@ -151,7 +151,7 @@
                       Clase:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="clase" [(ngModel)]="ingrediente.clase">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -159,7 +159,7 @@
                       Nombre:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="nombre" [(ngModel)]="ingrediente.nombre">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -167,7 +167,7 @@
                       &nbsp;
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <button> <i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
+                      <button (click)="agregarIngrediente()"> <i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
                   </div>
               </div>
           </div>
@@ -179,10 +179,10 @@
                       <th>Nombre</th>
                       <th>Opciones</th>
                   </tr>
-                  <tr>
-                    <td>Clase 1</td>
-                    <td>Nombre 1</td>
-                    <td><i class="fa fa-times fa-2x" aria-hidden="true"></i> </td>
+                  <tr *ngFor="let ing of ingredientes; let i = index">
+                    <td>{{ing.clase}}</td>
+                    <td>{{ing.nombre}}</td>
+                    <td><i class="fa fa-times fa-2x" aria-hidden="true" (click)="quitarIngrediente(ing)"></i> </td>
                   </tr>
                 </table>
           </div>
@@ -195,7 +195,7 @@
                       Calorias Totales:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="caloriasTotales" [(ngModel)]="nutricion.caloriasTotales">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -203,7 +203,7 @@
                       Calorias de grasas:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="caloreiasGrasas" [(ngModel)]="nutricion.caloreiasGrasas">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -211,7 +211,7 @@
                       Proteinas:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="proteinas" [(ngModel)]="nutricion.proteinas">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -219,7 +219,7 @@
                       Grasa total:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="grasaTotal" [(ngModel)]="nutricion.grasaTotal">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -227,7 +227,7 @@
                       Grasa saturada:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="grasaSaturada" [(ngModel)]="nutricion.grasaSaturada">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -235,7 +235,7 @@
                       Carbohidratos totales:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="carbohidratosTotatles" [(ngModel)]="nutricion.carbohidratosTotatles">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -243,7 +243,7 @@
                       Fibra dietaria:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="fibraDietaria" [(ngModel)]="nutricion.fibraDietaria">
                   </div>
               </div>
           </div>
@@ -254,7 +254,7 @@
                       Colesterol:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="colesterol" [(ngModel)]="nutricion.colesterol">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -262,7 +262,7 @@
                       Sodio:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="sodio" [(ngModel)]="nutricion.sodio">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -270,7 +270,7 @@
                       Grasas Trans:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="grasaTrans" [(ngModel)]="nutricion.grasaTrans">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -278,7 +278,7 @@
                       Azucares:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="azucares" [(ngModel)]="nutricion.azucares">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -286,7 +286,7 @@
                       Vitamina A:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="vitaminaA" [(ngModel)]="nutricion.vitaminaA">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -294,7 +294,7 @@
                       Vitamina C:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="vitaminaC" [(ngModel)]="nutricion.vitaminaC">
                   </div>
               </div>
               <div class="productocore__data__contenido__col__registro">
@@ -302,7 +302,7 @@
                       Hierro:
                   </div>
                   <div class="productocore__data__contenido__col__registro__campo">
-                      <input type="text" name="" [(ngModel)]="name">
+                      <input type="text" name="hierro" [(ngModel)]="nutricion.hierro">
                   </div>
               </div>
             </div>
@@ -312,7 +312,7 @@
                         Calcio:
                     </div>
                     <div class="productocore__data__contenido__col__registro__campo">
-                        <input type="text" name="" [(ngModel)]="name">
+                        <input type="text" name="calcio" [(ngModel)]="nutricion.calcio">
                     </div>
                 </div>
                 <div class="productocore__data__contenido__col__registro">
@@ -320,13 +320,14 @@
                         Declaracion de Propiedades de Salud:
                     </div>
                     <div class="productocore__data__contenido__col__registro__campo">
-                        <input type="text" name="" [(ngModel)]="name">
+                        <input type="text" name="declaracion" [(ngModel)]="nutricion.declaracion">
                     </div>
                 </div>
             </div>
       </div>
-  </div>
-  <div class="productocore__boton">
-    <i class="fa fa-save fa-2x" aria-hidden="true"></i>
+
+      <div class="productocore__data__botones">
+          <button (click)="guardar()"><i class="fa fa-save fa-2x" aria-hidden="true"></i> Guardar</button>
+      </div>
   </div>
 </div>

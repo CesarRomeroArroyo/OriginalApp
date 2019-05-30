@@ -7,9 +7,9 @@ export class Producto {
     marca: string;
     registro: string;
     lote: string;
-    fechaProduccion: Date;
-    fechaAdtaConsumo: Date;
-    fechaVencimiento: Date;
+    fechaProduccion: string;
+    fechaAdtaConsumo: string;
+    fechaVencimiento: string;
     contenidoNeto: string;
     volumen: string;
     unidadMedida: string;
@@ -23,9 +23,9 @@ export class Producto {
         this.marca= '';
         this.registro= '';
         this.lote= '';
-        this.fechaProduccion= new Date();
-        this.fechaAdtaConsumo= new Date();
-        this.fechaVencimiento= new Date();
+        this.fechaProduccion= '';
+        this.fechaAdtaConsumo= '';
+        this.fechaVencimiento= '';
         this.contenidoNeto= '';
         this.volumen= '';
         this.unidadMedida= '';
